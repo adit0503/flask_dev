@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo
 #DataRequired = field can not be empty
 #Length = field between 2-20 characters only
 
-class registration(FlaskForm):
+class registrationform(FlaskForm):
     uname = StringField('Uname', validators=[DataRequired(),Length(min=2,max=20)])
 
     email = StringField('Email', validators=[DataRequired(),Email()])
@@ -16,7 +16,7 @@ class registration(FlaskForm):
     sub = SubmitField('Submit')
 
 
-class login(FlaskForm):
+class loginform(FlaskForm):
     email = StringField('Email', validators=[DataRequired(),Email()])
 
     pwd = PasswordField('Pwd', validators=[DataRequired()])
